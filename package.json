@@ -1,0 +1,20 @@
+{
+  "name": "nginx-sample-backend",
+  "version": "1.0.0",
+  "description": "Load-balanced Express.js backend behind an Nginx reverse proxy",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:3000": "node server.js 3000",
+    "start:3001": "node server.js 3001",
+    "start:3002": "node server.js 3002",
+    "dev": "node --watch server.js",
+    "nginx:test": "\"C:\\nginx-1.30.2\\nginx.exe\" -p \"C:\\nginx-1.30.2\" -c \"f:\\nginx_sample_backend\\nginx.conf\" -t",
+    "nginx:start": "start \"\" \"C:\\nginx-1.30.2\\nginx.exe\" -p \"C:\\nginx-1.30.2\" -c \"f:\\nginx_sample_backend\\nginx.conf\"",
+    "nginx:reload": "\"C:\\nginx-1.30.2\\nginx.exe\" -p \"C:\\nginx-1.30.2\" -c \"f:\\nginx_sample_backend\\nginx.conf\" -s reload",
+    "nginx:stop": "\"C:\\nginx-1.30.2\\nginx.exe\" -p \"C:\\nginx-1.30.2\" -c \"f:\\nginx_sample_backend\\nginx.conf\" -s quit"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
